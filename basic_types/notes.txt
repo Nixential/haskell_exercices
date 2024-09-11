@@ -1,0 +1,8 @@
+Basic types:
+
+Booleans: Bool
+Integers: Int, Integer
+Reals: Float, Double
+Characters: Char
+
+the nore operator in Haskell is: /= NOT !=
