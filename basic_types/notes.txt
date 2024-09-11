@@ -5,4 +5,10 @@ Integers: Int, Integer
 Reals: Float, Double
 Characters: Char
 
-the nore operator in Haskell is: /= NOT !=
+the not operator in Haskell is: /= NOT !=
+
+Conversion functions for chars:
+
+import Data.Char
+ord :: Char -> Int
+chr :: Int -> Char
