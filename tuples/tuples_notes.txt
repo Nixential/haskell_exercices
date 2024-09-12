@@ -1,0 +1,11 @@
+- Tuples can hold mutiple types of data
+example: (3, 'z', False) :: (Int, Char, Bool)
+
+- Tuples can be nested
+(True, (6 , 9)) :: (Bool, (Int, Int))
+
+Use cases:
+
+* Can be used if a function has to return more than one value
+example: mostFrequentCharacter :: String -> (Char, Int)
+	 mostFrequentCharacter "AVATAR" -> ('A', 3)
