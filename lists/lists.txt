@@ -10,3 +10,38 @@ We can also have lists of tuples in haskell
 
 We can have a list of lists:
 [[8], [3,4,5]] :: [[Int]]
+
+List constructors:
+
+Empty List:
+[] :: [a]
+
+Add Head:
+(:) :: a -> [a] -> [a]
+
+The notation:
+[15, 12, 21]
+
+is a shortcut for:
+15 : 12 : 21 : []
+
+which also means:
+15 : (12 : (21 : []))
+
+lists are linked lists in haskell
+
+l1 = 3 : 2 : 1 : []
+l2 = 4 : l1
+
+nodes of the list are immutable
+
+Lists and patters:
+sum [] = 0
+sum (x:xs) = x + sum xs -- list of elements removing  the first one (x is an element and xs is a list)
+
+The type String is a list of Chars [Char]
+name1 :: [Char]
+name1 :: 'j' : 'i' : 'm' : []
+
+name2 : String
+name2 = "Nixential"
