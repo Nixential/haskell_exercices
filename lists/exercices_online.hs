@@ -1,3 +1,5 @@
+module ExercicesOnline where
+
 -- Write a function sumList :: [Int] -> Int that takes a list of integers and returns the sum of all the elements.
 sumList :: [Int] -> Int
 sumList [] = 0
@@ -72,3 +74,17 @@ listAtIndex n (x:xs)
   | n > 0 = listAtIndex  (n - 1) xs
   | otherwise = error "Impossible to get list at negative index"
 listAtIndex _ [] = error "Index out of bounds"
+
+-- Write a function that returns the last element of a list
+lastElement :: [a] -> a
+lastElement [] = error "List empty"
+lastElement [x] = x
+lastElement (x:xs) = lastElement xs
+
+-- Write a function secondToLast that returns the second-to-last element of a list.
+
+secondToLast :: [a] -> a
+secondToLast [] = error "No second to last"
+secondToLast [_] = error "No second to last element"
+secondToLast [x, _] = x
+secondToLast (_:xs) = secondToLast xs
