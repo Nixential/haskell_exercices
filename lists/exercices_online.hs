@@ -42,3 +42,33 @@ isInList x (y:ys)
 
 -- Write a function removeDuplicates :: Eq a => [a] -> [a] that removes all duplicate elements from a list.
 --removeDuplicates :: Eq a => [a] -> [a]
+-- TODO
+
+
+-- Write a function filterEvens :: [Int] -> [Int] that returns a list with all the even numbers in the list 
+filterEvens :: [Int] -> [Int]
+filterEvens []  = []
+filterEvens (x:xs)
+  | even x = x : filterEvens(xs)
+  | otherwise = filterEvens(xs)
+
+-- Write a function filterOdds :: [Int] -> [Int] that returns a list with all the odd numbers in the list
+filterOdds :: [Int] -> [Int]
+filterOdds [] = []
+filterOdds (x:xs)
+  | odd x = x : filterOdds xs
+  | otherwise = filterOdds xs
+
+-- Write a function flatten that takes a list of lists and combines them into a single list.
+
+flatten :: [[Int]] -> [Int]
+flatten [] = []
+flatten (x:xs) = x ++ flatten xs
+
+-- Write a function that return an element in a list at a given index
+listAtIndex :: Int -> [a] -> a
+listAtIndex 0 (x:_) = x
+listAtIndex n (x:xs)
+  | n > 0 = listAtIndex  (n - 1) xs
+  | otherwise = error "Impossible to get list at negative index"
+listAtIndex _ [] = error "Index out of bounds"
