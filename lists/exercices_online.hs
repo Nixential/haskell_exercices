@@ -88,3 +88,11 @@ secondToLast [] = error "No second to last"
 secondToLast [_] = error "No second to last element"
 secondToLast [x, _] = x
 secondToLast (_:xs) = secondToLast xs
+
+
+-- Recreate the zip function
+
+listZip :: [a] -> [b] -> [(a, b)]
+listZip [] _ = []
+listZip _ [] = []
+listZip (x:xs) (y:ys) = (x, y) : listZip xs ys
