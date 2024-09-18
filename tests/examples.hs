@@ -9,3 +9,12 @@ duplicatesInList (x:xs) = dupHelper x xs
         dupHelper y (x:xs)
           | y == x = True
           | otherwise = dupHelper y xs
+
+maxInList :: [Int] -> Int
+maxInList [] = error "Empty List does not have a max value"
+maxInList [x] = x 
+maxInList (x:xs) = maxHelper x xs
+  where maxHelper :: Int -> [Int] -> Int
+        maxHelper max [y] = if y > max then y else max
+        maxHelper max (y:ys) = if y > max then maxHelper y ys else maxHelper max ys 
+
