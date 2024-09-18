@@ -17,3 +17,15 @@ myButLast (x:xs) = myButLast xs
 dupli :: [a] -> [a]
 dupli [] = []
 dupli (x:xs) = x:x:dupli xs
+
+mySum :: [Int] -> Int
+mySum [] = 0
+mySum (x:xs) = x + mySum xs
+
+myLength :: [Int] -> Int
+myLength [] = 0
+myLength (_:xs) = 1 + myLength xs
+
+average :: [Int] -> Double
+average [] = 0
+average xs = fromIntegral ( mySum xs ) / fromIntegral (  myLength xs )
