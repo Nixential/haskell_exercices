@@ -29,3 +29,5 @@ myLength (_:xs) = 1 + myLength xs
 average :: [Int] -> Double
 average [] = 0
 average xs = fromIntegral ( mySum xs ) / fromIntegral (  myLength xs )
+
+-- InsertAt
